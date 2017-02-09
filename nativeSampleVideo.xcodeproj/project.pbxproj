@@ -14,7 +14,6 @@
 		CAD7D0FB1E49B629008FD1D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAD7D0F91E49B629008FD1D9 /* Main.storyboard */; };
 		CAD7D0FD1E49B629008FD1D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD7D0FC1E49B629008FD1D9 /* Assets.xcassets */; };
 		CAD7D1001E49B629008FD1D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAD7D0FE1E49B629008FD1D9 /* LaunchScreen.storyboard */; };
-		CAE9CBDB1E4BECDF008C5680 /* starburst_2x_b49770438.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE9CBDA1E4BECDF008C5680 /* starburst_2x_b49770438.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		CAD7D0FC1E49B629008FD1D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAD7D0FF1E49B629008FD1D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAD7D1011E49B629008FD1D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CAE9CBDA1E4BECDF008C5680 /* starburst_2x_b49770438.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = starburst_2x_b49770438.png; path = ../../Desktop/starburst_2x_b49770438.png; sourceTree = "<group>"; };
 		EC670D95A27B2F526B32883B /* Pods-nativeSampleVideo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativeSampleVideo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nativeSampleVideo/Pods-nativeSampleVideo.debug.xcconfig"; sourceTree = "<group>"; };
 		FE8D2FB07DA5EBF9F6B791FD /* Pods-nativeSampleVideo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativeSampleVideo.release.xcconfig"; path = "Pods/Target Support Files/Pods-nativeSampleVideo/Pods-nativeSampleVideo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,7 +79,6 @@
 				CAD7D0F71E49B629008FD1D9 /* ViewController.m */,
 				CAD7D0F91E49B629008FD1D9 /* Main.storyboard */,
 				CAD7D0FC1E49B629008FD1D9 /* Assets.xcassets */,
-				CAE9CBDA1E4BECDF008C5680 /* starburst_2x_b49770438.png */,
 				CAD7D0FE1E49B629008FD1D9 /* LaunchScreen.storyboard */,
 				CAD7D1011E49B629008FD1D9 /* Info.plist */,
 				CAD7D0F01E49B629008FD1D9 /* Supporting Files */,
@@ -171,7 +168,6 @@
 				CAD7D1001E49B629008FD1D9 /* LaunchScreen.storyboard in Resources */,
 				CAD7D0FD1E49B629008FD1D9 /* Assets.xcassets in Resources */,
 				CAD7D0FB1E49B629008FD1D9 /* Main.storyboard in Resources */,
-				CAE9CBDB1E4BECDF008C5680 /* starburst_2x_b49770438.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
