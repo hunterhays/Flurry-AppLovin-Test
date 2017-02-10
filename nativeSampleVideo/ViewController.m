@@ -12,6 +12,7 @@
 #import "AFNetworking/AFNetworking.h"
 #import "UIImageView+AFNetworking.h"
 
+
 @interface ViewController () <FlurryAdNativeDelegate>
 
 @property (nonatomic, retain) FlurryAdNative* nativeAd;
@@ -83,9 +84,19 @@
     //remove previous ad object
      self.nativeAd = nil;
     }
-        //”iOSNativeAd” is configured on dev.flurry.com as a Stream ad space
     
-    FlurryAdNative* nativeAd = [[FlurryAdNative alloc] initWithSpace:@"InStream"];
+    NSString* adUnitName;
+    
+    if (self.videoSwitch.isOn) {
+        adUnitName = @"InStream";
+    } else {
+        adUnitName = @"infeed_static";
+    }
+    
+    
+    //”iOSNativeAd” is configured on dev.flurry.com as a Stream ad space
+    
+      FlurryAdNative* nativeAd = [[FlurryAdNative alloc] initWithSpace:adUnitName];
     
     //Assign the FlurryAdNativeDelegate
     nativeAd.adDelegate = self;

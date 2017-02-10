@@ -10,6 +10,7 @@
 #import "FlurryAdNativeDelegate.h"
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UISwitch *videoSwitch;
 
 @property (unsafe_unretained, nonatomic) IBOutlet UILabel *cardTitleLabel;
 @property (unsafe_unretained, nonatomic) IBOutlet UILabel *cardSummaryLabel;
