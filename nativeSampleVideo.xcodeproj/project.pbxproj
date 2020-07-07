@@ -114,8 +114,7 @@
 				CAD7D0E91E49B629008FD1D9 /* Sources */,
 				CAD7D0EA1E49B629008FD1D9 /* Frameworks */,
 				CAD7D0EB1E49B629008FD1D9 /* Resources */,
-				4FDD78B17580B6F88F1F644F /* [CP] Embed Pods Frameworks */,
-				4717D46E050B1C66D45CB264 /* [CP] Copy Pods Resources */,
+				7523CB86DB2773616043718D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -174,34 +173,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4717D46E050B1C66D45CB264 /* [CP] Copy Pods Resources */ = {
+		7523CB86DB2773616043718D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nativeSampleVideo/Pods-nativeSampleVideo-resources.sh",
+				"${PODS_ROOT}/AppLovinSDK/applovin-ios-sdk-6.13.0/AppLovinSDKResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AppLovinSDKResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-nativeSampleVideo/Pods-nativeSampleVideo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4FDD78B17580B6F88F1F644F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-nativeSampleVideo/Pods-nativeSampleVideo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-nativeSampleVideo/Pods-nativeSampleVideo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FCB17E4A5CBC9773A67507EF /* [CP] Check Pods Manifest.lock */ = {
@@ -210,13 +197,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-nativeSampleVideo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

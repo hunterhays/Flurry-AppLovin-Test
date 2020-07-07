@@ -29,6 +29,9 @@
 
 - (void) adNativeDidFetchAd:(FlurryAdNative*)nativeAd
 {
+    self.containerView.hidden=NO;
+    self.hideAdButton.hidden=NO;
+    
     // The SDK returns this callback for every instance of the native ad fetched.
     // The flurryAd object contains all the ad assets
     NSLog(@"Native Ad for Space [%@] Received Ad with [%lu] assets", nativeAd.space, (unsigned long)nativeAd.assetList.count);
@@ -51,7 +54,9 @@
         {
             self.cardRectangleImageView.contentMode = UIViewContentModeScaleAspectFit;
             [self.cardRectangleImageView setImageWithURL:[NSURL URLWithString:asset.value] placeholderImage:[UIImage imageNamed:@"placeholderImage"]];
-            self.cardRectangleImageView.hidden = NO;        }
+            self.cardRectangleImageView.hidden = NO;
+            self.cardRectangleVideoViewContainer.hidden = YES;
+        }
     }
     self.cardSponsoredLabel.text = @"SPONSORED";
     
@@ -62,7 +67,7 @@
         self.cardRectangleImageView.hidden = YES;
     }
     
-    self.nativeAd.trackingView = self.containerView;
+   self.nativeAd.trackingView = self.containerView;
 }
 
 //Informational callback invoked when there is an ad error
@@ -86,14 +91,9 @@
     }
     
     NSString* adUnitName;
+    adUnitName = @"fullCard";
     
-    if (self.videoSwitch.isOn) {
-        adUnitName = @"InStream";
-    } else {
-        adUnitName = @"infeed_static";
-    }
-    
-    
+
     //”iOSNativeAd” is configured on dev.flurry.com as a Stream ad space
     
       FlurryAdNative* nativeAd = [[FlurryAdNative alloc] initWithSpace:adUnitName];
@@ -107,9 +107,19 @@
     
     self.nativeAd = nativeAd;
     
+    
+    
+    if (self.videoSwitch.isOn) {
+        FlurryAdTargeting* adTargeting = [FlurryAdTargeting targeting];
+        adTargeting.testAdsEnabled = YES;
+        nativeAd.targeting = adTargeting;
+    }
+    
+    
+    
     //Request the ad from Flurry.
     [nativeAd fetchAd];
-        }
+}
 
 /*!
  *  @brief Informational callback invoked when an ad impression is logged
@@ -120,5 +130,9 @@
  */
 - (void) adNativeDidLogImpression:(FlurryAdNative*) nativeAd {
     NSLog(@"Impression will be counted!");
+}
+- (IBAction)hideAd:(id)sender {
+    self.containerView.hidden=YES;
+    self.hideAdButton.hidden=YES;
 }
 @end

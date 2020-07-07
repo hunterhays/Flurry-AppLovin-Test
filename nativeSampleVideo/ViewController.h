@@ -23,6 +23,9 @@
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
+@property (weak, nonatomic) IBOutlet UIButton *hideAdButton;
+
+
 //this UIView overlaps cardRectangleImageView. It could be used for
 //presenting a video ad, otherwise it can be hidden
 //

@@ -8,7 +8,7 @@ pod 'AFNetworking', '~> 3.0'
   # use_frameworks!
 
   # Pods for nativeSampleVideo
-pod 'Flurry-iOS-SDK/FlurrySDK' #Analytics Pod
-pod 'Flurry-iOS-SDK/FlurryAds' #Advertising Pod (requires Analytics)
-
+  pod 'AppLovinSDK'
+  pod 'Flurry-iOS-SDK/FlurrySDK', '10.3.2'
+  pod 'Flurry-iOS-SDK/FlurryAds', '10.3.2'
 end

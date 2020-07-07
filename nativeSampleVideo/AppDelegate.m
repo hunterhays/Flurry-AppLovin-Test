@@ -26,7 +26,7 @@
                                       withSessionContinueSeconds:10]
                                      withAppVersion:@"0.1.2"];
     
-    [Flurry startSession:@"2WZ22NRSX8W52VKZBX9G" withSessionBuilder:builder];
+    [Flurry startSession:@"TGKV8B5954VG6HVPPX8R" withSessionBuilder:builder];
     
     return YES;
 }
